@@ -40,13 +40,20 @@ gem 'wunderground', '~> 1.1.0'
 gem 'forecast_io', '~> 2.0.0'
 gem 'rturk', '~> 2.11.0'
 
-gem 'twitter', '~> 5.7.1'
+#gem 'twitter', '~> 5.7.1'
+gem 'twitter', '~> 5.5.1'
 gem 'twitter-stream', github: 'cantino/twitter-stream', branch: 'master'
 gem 'em-http-request', '~> 1.1.2'
 gem 'weibo_2', '~> 0.1.4'
 gem 'hipchat', '~> 1.1.0'
 
 gem 'therubyracer', '~> 0.12.1'
+
+# alchemy-api-rb requires faraday 0.8.1
+# but twitter 5.7.1 requires faraday 0.9
+# downgrade twitter and specify faraday
+gem 'alchemy-api-rb', :require => 'alchemy_api'
+gem 'faraday', '0.8.1'
 
 group :development do
   gem 'binding_of_caller'

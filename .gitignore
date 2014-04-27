@@ -24,3 +24,5 @@ deployment/cookbooks
 .*un~
 .ruby-gemset
 .ruby-version
+*.iml
+.idea
